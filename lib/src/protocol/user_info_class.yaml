@@ -1,0 +1,24 @@
+# Add your generated serializable classes in the `protocol` directory. Produce
+# the generated serve and client code by running `serverpod generate` in the
+# root directory of the modules server package. You should include the generated
+# code in any published packages.
+
+class: UserInfo
+table: serverpod_user_info
+fields:
+  userIdentifier: String
+  userName: String
+  fullName: String?
+  email: String?
+  created: DateTime
+  imageUrl: String?
+  scopeNames: List<String>
+  active: bool
+  blocked: bool
+  suspendedUntil: DateTime?
+indexes:
+  serverpod_user_info_user_identifier:
+    fields: userIdentifier
+    unique: true
+  serverpod_user_info_email:
+    fields: email

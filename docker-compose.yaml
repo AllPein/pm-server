@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:14.1
+    ports:
+      - '8090:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: pm
+      POSTGRES_PASSWORD: PdxzuY8ktpOvq7Bl6aEtqImIqs8pWsc7
+    volumes:
+      - pm_data:/var/lib/postgresql/data
+  redis:
+    image: redis:6.2.6
+    ports:
+      - '8091:6379'
+    command: redis-server --requirepass F2moQght5sgohhSD2t3-1VI_T4Vb8XfL
+    environment:
+      - REDIS_REPLICATION_MODE=master
+volumes:
+  pm_data:

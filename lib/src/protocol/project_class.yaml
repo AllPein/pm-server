@@ -1,0 +1,6 @@
+class: Project
+fields:
+  name: String
+  owner: UserInfo
+  teamLead: UserInfo
+  participants: List<UserInfo>

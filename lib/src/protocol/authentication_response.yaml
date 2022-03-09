@@ -1,0 +1,7 @@
+class: AuthenticationResponse
+fields:
+  success: bool
+  key: String?
+  keyId: int?
+  user: UserInfo?
+  failReason: AuthenticationFailReason?

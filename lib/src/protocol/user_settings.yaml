@@ -1,0 +1,3 @@
+class: UserSettingsConfig
+fields:
+  canEditProject: bool

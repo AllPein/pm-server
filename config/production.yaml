@@ -1,0 +1,32 @@
+# This is the configuration file for your production environment.
+#
+# To improve scalability and reliability it's possible to run Serverpod over a
+# cluster of servers. The ids of the servers should be in a consecutive sequence
+# from 0 to n-1 where n is the number of servers in your cluster.
+
+# Defines public facing access to the server, in production mode this will be
+# the address of your load balancer or cloud front.
+publicHost: https://sasha-pm-server.herokuapp.com/
+publicPort: 443
+publicScheme: https
+
+# Main port to run the server on.
+port: 80
+# Service port, used for insights from the server while it's running.
+servicePort: 81
+
+# This is the database setup for your servers. You will need to edit this to get
+# the server up and running.
+database:
+  host: ec2-63-32-7-190.eu-west-1.compute.amazonaws.com
+  port: 5432
+  name: d8kog2k41nsktf
+  user: icunjmyxzkxnok
+
+redis://:pabbcc4329b6a29752d733f2d933ca0445c3cf4cc1ba264dba5a44e5eaea48985@ec2-18-200-145-208.eu-west-1.compute.amazonaws.com:20399
+# This is the database setup for your servers. You will need to edit this to get
+# the server up and running.
+# This is the setup for Redis.
+redis:
+  host: ec2-18-200-145-208.eu-west-1.compute.amazonaws.com
+  port: 20399
